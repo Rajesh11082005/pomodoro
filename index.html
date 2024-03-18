@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro Timer</title>
+</head>
+<body id="body">
+    <audio src="wrong-answer-129254.mp3" preload="auto" id="alertaudio"></audio>
+    <div class="main-wrappaer" id="main-wrapper">
+
+        <nav class="nav-wrapper">
+
+            <div class="title" id="logo">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="56" viewBox="0 0 38 46" fill="none">
+                    <path d="M21.8493 3.9324C20.6706 5.06631 19.8507 5.12951 18.9462 5.2401C18.8795 5.24825 18.8234 5.18993 18.8342 5.12363C18.9797 4.22411 19.0746 3.40726 20.2534 2.27335C21.4321 1.13945 22.252 1.07624 23.1565 0.965656C23.2231 0.957507 23.2792 1.01583 23.2685 1.08212C23.123 1.98165 23.028 2.7985 21.8493 3.9324Z" fill="#74D5FF" id="leaf1" class="path"/>
+                    <path d="M17.3693 2.21316C18.5172 3.37822 18.5903 4.19732 18.7117 5.10042C18.7206 5.16697 18.663 5.22377 18.5966 5.21384C17.6954 5.07908 16.8774 4.99394 15.7295 3.82888C14.5815 2.66381 14.5085 1.84472 14.3871 0.941613C14.3782 0.875058 14.4358 0.818259 14.5022 0.828191C15.4034 0.962958 16.2214 1.04809 17.3693 2.21316Z" fill="#74D5FF" id="leaf2" class="path"/>
+                    <path d="M4.05951 45V19.6446C4.05951 18.9002 4.8437 18.4168 5.50873 18.7511L13.8374 22.9389C14.1751 23.1086 14.3882 23.4543 14.3882 23.8323V36.5145C14.3882 41.9491 10.7149 45.5855 5.05992 45.9668C4.50889 46.0039 4.05951 45.5523 4.05951 45Z" fill="#EEEEEE"/>
+                    <g filter="url(#filter0_d_28_11)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7553 34.8857C26.9044 34.8857 33.5106 28.2795 33.5106 20.1304C33.5106 14.4299 30.278 9.48441 25.5459 7.02708C27.2791 8.7631 28.3509 11.1597 28.3509 13.8067C28.3509 19.1062 24.0548 23.4023 18.7553 23.4023C13.4558 23.4023 9.15971 19.1062 9.15971 13.8067C9.15971 11.1597 10.2315 8.7631 11.9647 7.02708C7.23262 9.48441 4 14.4299 4 20.1304C4 28.2795 10.6062 34.8857 18.7553 34.8857Z" fill="#EEEEEE"/>
+                    </g>
+                    <g filter="url(#filter1_d_28_11)">
+                      <rect x="18.3127" y="13.2798" width="4.2158" height="1.47553" rx="0.737764" transform="rotate(16.6711 18.3127 13.2798)" fill="#EEEEEE"/>
+                    </g>
+                    <g filter="url(#filter2_d_28_11)">
+                      <rect x="18.0177" y="8.53693" width="1.47553" height="6.32369" rx="0.737764" fill="#EEEEEE"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_28_11" x="0" y="4.21112" width="37.5106" height="38.6746" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_28_11"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28_11" result="shape"/>
+                      </filter>
+                      <filter id="filter1_d_28_11" x="14.0699" y="13.4602" width="12.101" height="10.262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.75 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_28_11"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28_11" result="shape"/>
+                      </filter>
+                      <filter id="filter2_d_28_11" x="14.0177" y="8.53693" width="9.47552" height="14.3237" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_28_11"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28_11" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+
+            </div>
+
+            <div class="ham-menu">
+
+                <label class="bar" for="check" id="ham">
+                    <input type="checkbox" id="check" >
+                    <span class="top" id="t"></span>
+                    <span class="middle" id="m"></span>
+                    <span class="bottom" id="b"></span>
+                </label>
+
+            </div>
+
+        </nav>
+
+        <div class="menu" id="menu">
+
+            <div class="inputbox">
+
+                <div class="maintimer rangeInput inpbox">
+                    <label for="worktime"><h3>Work Time</h3></label>
+                    <span id="rangeValue1" class="rangeValue">25</span>
+                    <input class="range" type="range" id="Worktime" value="25" name="forworktime"  min="1" max="60" ></input>
+                </div>
+
+                <div class="breaktimer rangeInput inpbox">
+                    <label for="Breaktime"><h3>Break Time</h3></label>
+                    <span id="rangeValue2" class="rangeValue">05</span>
+                    <input class="range" type="range" id="Breaktime" name="forbreaktime" value="5" min="1" max="30"></input>
+                </div>
+
+                <div class="breaktimer rangeInput inpbox">
+                    <label for="LongBreaktime"><h3>Long Break Time</h3></label>
+                    <span id="rangeValue3" class="rangeValue">15</span>
+                    <input class="range" type="range" id="LongBreaktime" name="forongbreaktime" value="15" min="1" max="30"></input>
+                </div>
+
+                <div class="checkbox-wrapper inpbox">
+
+                    <div class="notify check">
+                        <h3>Notify</h3>
+                        <label class="ccontainer">
+                            <input type="checkbox" checked="checked" id="notify">
+                            <div class="checkmark" id="check"></div>
+                        </label>
+                    </div>
+    
+    
+                    <div class="autostart check">
+                        <h3>Auto Start</h3>
+                        <label class="ccontainer">
+                            <input type="checkbox" checked="checked" id="autostart" >
+                            <div class="checkmark" id="check"></div>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="color-themes">
+                    <div class="colors">
+                        <div class="color red" id="red"></div>
+                        <div class="color yellow" id="yellow"></div>
+                        <div class="color green" id="green"></div>
+                        <div class="color blue" id="blue"></div>
+                        <div class="color orange" id="orange"></div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="time-wrapper">
+
+            <div class="pomo-breaks-secs">
+
+                <div class="work wbb">
+                    <h3 id="work">WORK FOCUS</h3>
+                </div>
+
+                <div class="smallbreak wbb">
+                    <h3 id="sbreak">SHORT BREAK</h3>
+                </div>
+
+                <div class="longbreak wbb">
+                    <h3 id="lbreak">LONG BREAK</h3>
+                </div>
+
+            </div>
+
+            <svg id="spinner" class="for-bg"width="1376" height="1542" viewBox="0 0 1376 1542" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M848.366 1364.34C671.909 1426.09 425.568 1059.84 363.822 883.388C302.075 706.931 395.066 513.829 571.523 452.082C747.98 390.336 1115.88 487.846 1177.63 664.303C1239.38 840.76 1024.82 1302.59 848.366 1364.34ZM590.32 505.797C443.529 557.163 366.171 717.801 417.537 864.592C468.902 1011.38 629.54 1088.74 776.331 1037.37C923.122 986.009 1000.48 825.371 949.114 678.58C897.748 531.789 737.111 454.431 590.32 505.797Z" fill="#74D5FF" fill-opacity="0.6" class="path"/>
+                <path d="M72.2946 762.514C61.4464 575.88 481.305 439.736 667.939 428.888C854.572 418.04 1014.66 560.542 1025.51 747.175C1036.36 933.808 841.449 1260.72 654.815 1271.57C468.182 1282.42 83.1428 949.147 72.2946 762.514ZM968.698 750.477C959.674 595.221 826.498 476.676 671.241 485.7C515.984 494.725 397.44 627.901 406.464 783.157C415.489 938.414 548.665 1056.96 703.921 1047.93C859.178 1038.91 977.722 905.734 968.698 750.477Z" fill="#74D5FF" fill-opacity="0.6" class="path"/>
+                <path d="M85.9451 635.86C115.59 451.277 554.928 408.857 739.511 438.502C924.094 468.148 1049.7 641.814 1020.05 826.397C990.405 1010.98 729.596 1288.18 545.013 1258.54C360.43 1228.89 56.2997 820.443 85.9451 635.86ZM963.861 817.373C988.523 663.822 884.037 519.352 730.486 494.691C576.936 470.029 432.466 574.515 407.805 728.066C383.143 881.617 487.629 1026.09 641.18 1050.75C794.731 1075.41 939.2 970.923 963.861 817.373Z" fill="#74D5FF" fill-opacity="0.5" class="path"/>
+                <path d="M982.329 229.777C1151.65 309.032 1071.63 743.1 992.377 912.417C913.121 1081.73 711.614 1154.74 542.297 1075.49C372.979 996.233 178.174 669.258 257.43 499.941C336.685 330.623 813.012 150.522 982.329 229.777ZM566.422 1023.95C707.274 1089.88 874.904 1029.14 940.835 888.291C1006.77 747.439 946.031 579.809 805.18 513.878C664.328 447.947 496.698 508.682 430.767 649.534C364.836 790.385 425.571 958.016 566.422 1023.95Z" fill="#74D5FF" fill-opacity="0.5" class="path"/>
+                <path d="M527.723 176.903C704.358 115.67 949.633 482.627 1010.87 659.262C1072.1 835.898 978.546 1028.73 801.91 1089.96C625.274 1151.19 257.655 1052.62 196.422 875.979C135.189 699.343 351.087 238.135 527.723 176.903ZM783.27 1036.19C930.21 985.254 1008.03 824.842 957.096 677.902C906.158 530.962 745.746 453.138 598.806 504.076C451.866 555.015 374.041 715.427 424.98 862.367C475.918 1009.31 636.33 1087.13 783.27 1036.19Z" fill="#74D5FF" fill-opacity="0.6" class="path"/>
+                <path d="M1302.12 780.724C1312.43 967.388 892.176 1102.31 705.512 1112.62C518.848 1122.92 359.172 979.954 348.867 793.29C338.562 606.625 534.422 280.281 721.086 269.976C907.751 259.671 1291.82 594.06 1302.12 780.724ZM405.689 790.153C414.262 945.435 547.093 1064.37 702.375 1055.79C857.657 1047.22 976.589 914.39 968.016 759.108C959.443 603.826 826.613 484.894 671.33 493.467C516.048 502.04 397.117 634.87 405.689 790.153Z" fill="#74D5FF" fill-opacity="0.6" class="path"/>
+                <path d="M1288.01 907.599C1257.83 1092.09 818.367 1133.24 633.871 1103.05C449.375 1072.87 324.279 898.841 354.462 714.345C384.644 529.849 646.258 253.408 830.754 283.59C1015.25 313.772 1318.19 723.103 1288.01 907.599ZM410.624 723.533C385.516 877.011 489.58 1021.78 643.059 1046.89C796.537 1072 941.31 967.935 966.418 814.457C991.526 660.978 887.461 516.206 733.983 491.098C580.504 465.99 435.732 570.054 410.624 723.533Z" fill="#74D5FF" fill-opacity="0.5" class="path"/>
+                <path d="M390.552 1310.79C221.466 1231.05 302.743 797.214 382.49 628.128C462.238 459.042 663.957 386.619 833.043 466.367C1002.13 546.114 1195.98 873.655 1116.23 1042.74C1036.49 1211.83 559.638 1390.54 390.552 1310.79ZM808.767 517.838C668.108 451.497 500.302 511.745 433.961 652.404C367.621 793.063 427.868 960.869 568.527 1027.21C709.186 1093.55 876.993 1033.3 943.333 892.644C1009.67 751.985 949.427 584.178 808.767 517.838Z" fill="#74D5FF" fill-opacity="0.5" class="path"/>
+            </svg>
+                                    
+            
+            <div class="mtime-wrapper">
+                <div class="wtime-box">
+                    <h1 class="for-minutes" id="minutes">01</h1>
+                    <h1 class="forseconds" id="seconds">00</h1>
+                </div>
+            </div>
+            
+
+            <div class="time-btns-box">
+                <button class="play " id="start">Start Timer</button>
+                <button class="pause tbtn fbtn" id="pause">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM7 7V13H9V7H7ZM11 7V13H13V7H11Z" class="b"/>
+                    </svg>
+                </button>
+                <button class="restart tbtn fbtn" id="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 22 22" fill="none">
+                        <path d="M11 22C5.47715 22 0 17 0 11C0 5 5 0 11 0C17 0 22 5 22 11C22 17 16.5228 22 11 22ZM15.8201 16.0761C17.1628 14.8007 18 12.9981 18 11C18 7.13401 14.866 4 11 4C9.9391 4 8.9334 4.23599 8.03241 4.65834L9.0072 6.41292C9.6177 6.14729 10.2917 6 11 6C13.7614 6 16 8.23858 16 11H13L15.8201 16.0761ZM13.9676 17.3417L12.9928 15.5871C12.3823 15.8527 11.7083 16 11 16C8.23858 16 6 13.7614 6 11H9L6.17993 5.92387C4.83719 7.19929 4 9.0019 4 11C4 14.866 7.13401 18 11 18C12.0609 18 13.0666 17.764 13.9676 17.3417Z" class="b"/>
+                    </svg>
+                </button>
+                <button class="info fbtn" id="info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 22 22" fill="none">
+                        <path d="M11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11C22 17.0751 17.0751 22 11 22ZM9.9 9.9V16.5H12.1V9.9H9.9ZM9.9 5.5V7.7H12.1V5.5H9.9Z" class="b"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- <div class="cycles">
+                <p class="cyctitle">
+                    Cycles <span class="cycles" id="cycle">0</span>
+                </p>
+            </div> -->
+        </div>
+        <div class="info-box">
+            <svg width="387" height="645" viewBox="0 0 362 625" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M142.374 278.093C167.064 487.263 246.674 560.793 246.674 560.793L303.234 559.983L296.704 537.643C285.084 500.533 211.794 216.553 211.794 216.553L207.614 201.803L134.704 222.503L142.374 278.093Z" fill="white"/>
+                <path d="M145.164 281.303L138.934 227.003L70.1938 234.073C70.1938 234.073 21.6938 471.893 120.424 563.843C120.424 563.843 129.784 568.393 173.124 561.703L145.164 281.303Z" fill="white"/>
+                <path d="M125.604 564.303L132.995 573.133C132.995 573.133 154.025 570.463 151.005 590.743L174.464 588.863C174.464 588.863 175.485 575.783 173.125 561.693L125.604 564.303Z" fill="#D6EFFB"/>
+                <path d="M247.475 560.793L259.795 586.733L310.665 585.413L302.305 556.303L247.475 560.793Z" fill="#D6EFFB"/>
+                <path d="M104.224 607.463C104.224 607.463 100.314 619.653 104.394 622.853C108.474 626.053 176.464 622.043 176.464 622.043C176.464 622.043 180.464 617.953 176.314 608.273C172.154 598.603 104.224 607.463 104.224 607.463Z" fill="#D6EFFB"/>
+                <path d="M256.244 597.073C256.244 597.073 252.404 608.343 256.414 611.293C260.424 614.243 327.134 610.543 327.134 610.543C327.134 610.543 331.064 606.763 326.984 597.823C322.904 588.883 256.244 597.073 256.244 597.073Z" fill="#D6EFFB"/>
+                <path d="M124.735 44.8029C124.735 44.8029 207.125 43.4629 233.185 101.663L185.155 127.383L208.265 205.273L198.025 210.753C154.005 235.523 91.4646 232.583 91.4646 232.583C91.4646 232.583 72.9446 234.193 70.1846 234.073C67.4246 233.953 61.5 159.703 61.5 159.703C34.09 169.943 0.334664 159.703 0.334664 159.703C-6.40534 86.0129 90.8647 47.5229 93.4547 53.6929C93.4547 53.6929 93.0646 53.2329 92.4146 52.4029C92.4146 52.4029 95.3246 61.1029 103.475 61.4429C111.615 61.7929 118.775 57.8529 119.665 56.4929C120.555 55.1329 123.825 53.1929 124.735 44.8029Z" fill="#74D5FF" class="path"/>
+                <path d="M174.474 588.853L176.314 608.273C165.784 608.393 102.684 613.963 104.224 607.463C105.774 600.963 121.124 597.553 121.124 597.553C119.244 574.093 132.994 573.123 132.994 573.123C132.994 573.123 153.344 570.053 151.004 590.733L174.474 588.853Z" fill="#74D5FF" class="path"/>
+                <path d="M258.034 582.503L255.994 598.483L327.024 598.403V591.283L309.864 582.943C309.864 582.943 315.694 569.093 311.054 562.303C306.414 555.513 294.954 555.593 292.584 563.933C290.214 572.273 293.414 581.693 293.414 581.693L284.854 582.193C274.934 582.313 258.034 582.503 258.034 582.503L257.764 581.963Z" fill="#74D5FF" class="path"/>
+                <path d="M136.334 46.1831C142.514 64.1031 113.824 68.7931 93.6437 71.5731C73.4637 74.3531 79.9237 56.6231 79.9237 56.6231C79.9237 56.6231 88.0137 52.3431 92.6937 52.5331C92.6937 52.5331 95.2137 60.0531 101.264 60.6331C107.314 61.2131 113.694 58.3431 115.334 56.8431C116.974 55.3431 120.954 49.8731 121.544 44.2031L135.954 45.4131L136.334 46.1831Z" fill="#AD5E69"/>
+                <path d="M94.8543 56.423C91.5843 52.183 80.4243 36.263 86.7243 23.633C86.7243 23.633 82.6443 15.7829 92.6143 11.4929C102.584 7.20295 112.894 6.30299 115.134 1.10299C117.374 -4.10701 123.694 10.473 116.804 17.043" fill="#382232"/>
+                <path d="M106.044 63.7932C101.434 63.9732 98.0239 61.5532 98.0239 61.5532C95.1339 57.7732 93.2539 49.4832 92.0839 41.9032C92.0139 41.9132 91.9539 41.9132 91.8939 41.9132C90.0039 41.9132 88.4639 40.3832 88.4639 38.4932C88.4639 36.8432 89.6339 35.4632 91.1839 35.1432C90.6039 30.1332 90.3939 26.4932 90.3939 26.4932L116.814 17.0332L119.614 27.8232C120.264 31.0232 131.144 62.7932 106.044 63.7932Z" fill="#AD5E69"/>
+                <path d="M89.7246 24.833C89.7246 24.833 96.1447 49.563 97.5847 49.753C99.0247 49.943 110.685 37.503 122.445 45.473C122.445 45.473 123.205 55.523 116.005 61.113C116.005 61.113 109.845 65.993 100.245 63.313C100.245 63.313 95.7546 63.133 93.0746 50.283L89.7246 24.333" fill="#382232"/>
+                <path d="M105.194 51.233C105.194 51.233 111.754 46.523 115.414 48.223C119.074 49.913 111.114 55.463 105.194 51.233Z" fill="white"/>
+                <path d="M233.194 101.663C233.194 101.663 260.814 181.393 299.814 180.613C299.814 180.613 221.414 212.983 176.954 128.353L233.194 101.663Z" fill="#AD5E69"/>
+                <path d="M280.445 31.5529C271.025 38.7429 265.075 38.5229 258.475 38.5829C257.985 38.5829 257.635 38.123 257.765 37.653C259.555 31.293 260.905 25.4929 270.325 18.3029C279.745 11.1129 285.695 11.3329 292.295 11.2729C292.785 11.2729 293.135 11.7329 293.005 12.2029C291.215 18.5529 289.855 24.3529 280.445 31.5529Z" fill="#74D5FF" class="path"/>
+                <path d="M249.605 15.493C256.915 24.823 256.765 30.783 256.895 37.383C256.905 37.873 256.445 38.233 255.975 38.103C249.595 36.393 243.785 35.103 236.475 25.773C229.165 16.443 229.315 10.483 229.185 3.88298C229.175 3.39298 229.635 3.03301 230.105 3.16301C236.485 4.87301 242.295 6.16296 249.605 15.493Z" fill="#74D5FF" class="path"/>
+                <path d="M118.634 312.543L139.464 130.033C140.074 124.673 146.114 121.843 150.634 124.793L207.144 161.783C209.434 163.283 210.684 165.943 210.374 168.663L199.954 259.953C195.484 299.073 166.064 322.233 125.044 320.333C121.044 320.143 118.184 316.523 118.634 312.543Z" fill="#EEEEEE"/>
+                <g filter="url(#filter0_d_215_45)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M232.734 251.813C291.394 258.513 344.374 216.383 351.074 157.723C355.754 116.693 336.554 78.4329 304.504 56.8529C315.554 70.7729 321.304 88.9029 319.124 107.963C314.774 146.113 280.314 173.503 242.164 169.153C204.014 164.803 176.624 130.343 180.974 92.1929C183.154 73.1429 192.834 56.7729 206.734 45.6929C170.654 59.4929 143.324 92.4329 138.634 133.473C131.954 192.143 174.074 245.123 232.734 251.813Z" fill="#EEEEEE"/>
+                </g>
+                <path d="M252.214 98.033L270.464 105.853C273.174 107.013 274.434 110.153 273.274 112.873C272.114 115.583 268.974 116.843 266.254 115.683L248.004 107.863C245.294 106.703 244.034 103.563 245.194 100.843C246.354 98.123 249.504 96.873 252.214 98.033Z" fill="#EEEEEE"/>
+                <path d="M254.384 62.1531C257.314 62.4831 259.424 65.1331 259.084 68.0731L255.104 102.973C254.774 105.903 252.124 108.013 249.184 107.673C246.254 107.343 244.144 104.693 244.484 101.753L248.464 66.8532C248.804 63.9232 251.454 61.8131 254.384 62.1531Z" fill="#EEEEEE"/>
+                <path d="M2.99429 163.053C2.99429 163.053 -16.1057 296.123 122.484 216.803C122.484 216.803 157.344 207.253 160.454 206.733C163.564 206.213 159.964 198.453 130.254 205.933C130.254 205.933 125.814 202.683 131.904 200.463C131.904 200.463 134.544 199.693 136.594 200.073C138.654 200.453 138.704 192.663 129.384 196.013C129.384 196.013 119.934 198.743 118.684 206.373C118.684 206.373 49.6143 209.903 71.8943 152.983C71.8943 152.983 60.5843 158.063 38.9143 159.823C17.2443 161.583 2.96426 159.373 2.96426 159.373L2.99429 163.053Z" fill="#AD5E69"/>
+                <path d="M330.234 203.163C328.154 195.813 307.904 192.113 309.654 195.143C311.404 198.173 319.144 204.163 318.734 205.033C318.314 205.903 313.564 200.743 310.574 200.783C307.584 200.813 317.494 208.533 317.514 210.703C317.534 212.873 313.174 204.233 311.074 207.303C311.074 207.303 314.884 212.713 315.754 214.863C316.624 217.013 318.434 224.333 321.824 225.183C328.604 226.873 335.644 204.153 330.234 203.163Z" fill="#AD5E69"/>
+                <defs>
+                <filter id="filter0_d_215_45" x="127.938" y="45.6929" width="233.835" height="230.82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="14"/>
+                <feGaussianBlur stdDeviation="5"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_215_45"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_215_45" result="shape"/>
+                </filter>
+                </defs>
+            </svg>
+
+            <div class="contentbox">
+                <h2>POMODORO TIMER</h2>
+                <div class="inner-content-wrapper">
+                    <h3 style="text-align: none;">The secret to effective time management is...thinking in tomatoes rather than hours? It may seem silly at first, but millions of people swear by the life-changing power to the Pomodoro Technique. (Pomodoro is Italian for tomato. 🍅)
+                        This popular time management method asks you to alternate pomodoros — focused work sessions — with frequent short breaks to promote sustained concentration and stave off mental fatigue. <br><br><br>
+                        1 Pomodoro 🍅 = Focused Work Session 👨🏻‍💻 + 5-minutes breaks ☕️<br>
+                        After every 4 Pomodoros Long <b>Long Break 🥞</b> will be unlocked 🔓.
+                    </h3>
+                </div>
+
+                <div class="cycles-wrapper">
+                    <h3 class="cycles">
+                        YOUR POMODOROS - <span id="cycle">0</span>
+                    </h3>
+                </div>
+                
+
+            </div>                            
+        </div>
+        <iframe class="spotifys" id="spotify" style="border-radius:12px; background-color: #282828; z-index: 5;" src="https://open.spotify.com/embed/playlist/7L1nHViAg3EpmhpjD9UE4K?utm_source=generator&theme=0"  frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+</body>
+
+<script type="module" src="script.js"></script>
+<script type="module" src="drag.js"></script>
+<script type="module" src="theme.js"></script>
+
+
+
+</html>
