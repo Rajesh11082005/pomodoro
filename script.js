@@ -72,7 +72,7 @@ function updateTimerDisplay() {
 
 // // Start the timer
 function startTimer() {
-    
+
     timerInterval = setInterval(() => {
         if (currentTime > 0 && !isPaused) {
             currentTime--;
@@ -85,10 +85,10 @@ function startTimer() {
             currentTime = currentTime;
             SPINNER.style.animationName = "r"   
         }
-        
+
         else {
             if (isWorking) {
-                
+
                 if (cycleCount % 4 === 0 && cycleCount >= 3) {
                     if (isNotify){
                         sendNotification("Timer Completed", {
@@ -105,7 +105,7 @@ function startTimer() {
                     HWORK.classList.remove("tempclass");
                     HBREAK.classList.remove("tempclass");
                     HLBREAK.classList.add("tempclass");
-                    
+
                 } else {
                     if (isNotify){
                         sendNotification("Timer Completed", {
@@ -148,7 +148,7 @@ function startTimer() {
             }
             updateTimerDisplay();
         }
-   
+
 
     }, 1000);
     startButton.disabled = true;
@@ -182,7 +182,7 @@ function resetTimer() {
     HWORK.classList.add("tempclass");
     HBREAK.classList.remove("tempclass");
     HLBREAK.classList.remove("tempclass");
-    
+
     if (isAutoStart){
         pauseTimer();
     }
@@ -199,7 +199,7 @@ function focusInfo(){
         INFO.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 22 22" fill="none"><path d="M11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11C22 17.0751 17.0751 22 11 22ZM9.9 9.9V16.5H12.1V9.9H9.9ZM9.9 5.5V7.7H12.1V5.5H9.9Z" class="b"/></svg>'
         infoflag = false
     }
-    
+
 }
 
 
